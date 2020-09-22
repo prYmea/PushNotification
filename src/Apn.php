@@ -297,7 +297,7 @@ class Apn extends PushService implements PushServiceInterface
         }
 
         // Encode the payload as JSON
-        $payload = json_encode($message);
+        $payload = json_encode($message, JSON_FORCE_OBJECT);
 
         //When sending a notification we prepare a clean feedback
         $feedback = $this->initializeFeedback();
